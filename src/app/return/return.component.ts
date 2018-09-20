@@ -12,8 +12,7 @@ export class ReturnComponent implements OnInit {
   ngOnInit() {
   }
   PrintFlights(flightDetails: Flight, ReturnFlightDetails: Flight):void{
-    alert('Tickets booked for Flight: '+flightDetails.id+' and '+ReturnFlightDetails.id);
-    console.log(flightDetails.id);
+    alert('Tickets booked for '+this.flightService.passengerNum+' people on Flights: '+flightDetails.id+' and '+ReturnFlightDetails.id);
   }
   getTotalFare(flightDetails: Flight, ReturnFlightDetails: Flight): number{
     return flightDetails.Fare+ReturnFlightDetails.Fare;
