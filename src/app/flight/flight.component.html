@@ -1,0 +1,41 @@
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<div class='row' *ngFor="let Flight of flightService.getFlightsList()">
+    <div class='row'>
+        <div class='column left'>
+            <div class='card'>
+                <div class='row'>
+                    <h3 style="float:left">
+                        Rs. {{Flight.Fare}}/-
+                    </h3>
+                </div>
+                <table>
+                    <tr style="float: left;">{{Flight.id}}</tr>
+                    <tr>{{Flight.connecting_city1}} > {{Flight.connecting_city2}}</tr>
+                    <tr>
+                        <td>Depart Time:</td>
+                        <td>{{Flight.depart_time}}</td>
+                    </tr>
+                    <tr>
+                        <td>Arrival Time:</td>
+                        <td>{{Flight.arrival_time}}</td>
+                    </tr>
+                    <tr>
+                        <td style="Float: Left">Fare:</td>
+                        <td style="Float: Left">{{Flight.Fare}}</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+        <div class='column right'>
+            
+                <div class='row'>
+                    <img style='height: 80px; width:80px;' src="assets/download.jpg" alt="Flight Logo">
+                </div><br>
+                <div class='row'>
+                    <button class="searchButton" type="button" (click)="PrintFlights(Flight)">Book Flight</button>
+                </div>
+            
+        </div>
+    </div>
+
+</div>

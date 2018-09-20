@@ -1,0 +1,38 @@
+<div class='row'>
+    <ul class="tabrow">
+        <li [ngClass]="{'selected' : formName=='OneWay'}"><a href="#" (click)="getFormname('OneWay')">One Way</a></li>
+        <li [ngClass]="{'selected' : formName=='Return'}"><a href="#" (click)="getFormname('Return')">Return</a></li>
+    </ul>
+</div>
+<div class="row returncontainer">
+    <div class="row returncontainer center-align">
+        <input class="input-text-css" [(ngModel)]="fromCity" placeholder="*Enter Origin City" required>
+    </div>
+    <div class="row returncontainer center-align">
+        <input class="input-text-css" [(ngModel)]="toCity" placeholder="*Enter Destination City" required>
+    </div>
+    <div class="row returncontainer center-align">
+        <mat-form-field>
+            <input matInput [matDatepicker]="frompicker" placeholder="Departure date" [(ngModel)]="fromDate" required>
+            <mat-datepicker-toggle matSuffix [for]="frompicker"></mat-datepicker-toggle>
+            <mat-datepicker #frompicker></mat-datepicker>
+        </mat-form-field>
+    </div>
+    <div *ngIf="formName=='Return'" class="row returncontainer center-align">
+        <mat-form-field>
+            <input matInput [matDatepicker]="topicker" placeholder="Return date" [(ngModel)]="toDate" required>
+            <mat-datepicker-toggle matSuffix [for]="topicker"></mat-datepicker-toggle>
+            <mat-datepicker #topicker></mat-datepicker>
+        </mat-form-field>
+    </div>
+    <div class="row returncontainer center-align">
+        <input type="number" class="input-text-css" [(ngModel)]="numPassengers" placeholder="Number of Passengers"
+            required>
+    </div>
+    <div class="row  returncontainer center-align">
+        <button class="searchButton" type="button" (click)="searchFlights()">Search Flight</button>
+    </div>
+</div>
+<div class="row center-align">
+    <app-refinesearch></app-refinesearch>
+</div>

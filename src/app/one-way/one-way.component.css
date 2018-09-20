@@ -1,0 +1,18 @@
+
+.card {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    padding: 0px;
+    margin: 1em;
+    height: 150px; 
+    width:150px;
+    border: outset;
+    text-align: center;
+    background-color: #f1f1f1;
+  }
+  @media screen and (max-width: 600px) {
+    .column {
+      width: 50%;
+      display: table;
+      margin-bottom: 20px;
+    }
+  }

@@ -1,0 +1,21 @@
+<div class='card'>
+  <div class='row'>
+  <div class='column left'>
+    <h2 style="margin: 2em">{{getFlightPathTo()}}</h2>
+  </div>
+  <div class='column right'>
+    <div style="font-size:80%;">
+      <table style="margin: 3em">
+        <tr>
+          <td>{{getVar("Depart")}}</td>
+          <td>{{flightService.departureDate | date:'MM/dd/yyyy'}}</td>
+        </tr>
+        <tr>
+          <td *ngIf="flightService.FormName=='Return'">{{getVar("Return")}}</td>
+          <td>{{flightService.returnDate | date:'MM/dd/yyyy'}}</td>
+        </tr>
+      </table>
+    </div>
+  </div>
+  </div>
+</div>

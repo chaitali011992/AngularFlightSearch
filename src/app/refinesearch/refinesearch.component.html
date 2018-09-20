@@ -1,0 +1,10 @@
+<div class='Row'>
+<p style='font-style: oblique'>Refine flight search</p>
+<mat-slider 
+  (change)="updateSelectedValue($event)"
+  thumbLabel
+  [displayWith]="formatLabel"
+  tickInterval="500"
+  min="1000"
+  max="10000"></mat-slider>
+  </div>
